@@ -49,6 +49,9 @@ Utilize do usuario
 usuario - admin
 senha - admin
 
+### Utilização
+
+Ao efetuar o Login na aplicação você pode digitar qualquer frase para buscar artigos no blog https://www.uplexis.com.br e automaticamente salvar no banco de dados da aplicação
 
 
 ### Prerequisitos
