@@ -1,0 +1,8 @@
+* {padding: 0px;margin: 0px}
+html,body{font-family: 'Open Sans', sans-serif;height: 100%}
+a:link{text-decoration: none;}
+h1, h2,h3,h4,h5, .container-fluid{margin: 0px;padding: 0px;}
+
+.margin-top { margin-top: 40px; }
+.box-pesquisar { margin-bottom: 40px; margin-top: 40px; }
+
