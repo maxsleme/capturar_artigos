@@ -15,8 +15,12 @@ Route::get('/', 'HomeController@getIndex');
 
 Route::post('login', 'HomeController@postIndex');
 
-Route::get('sistema', 'HomeController@getSistema');
+Route::group(['middleware' => 'auth'], function () {
+	Route::get('sistema', 'HomeController@getSistema');
 
-Route::post('sistema', 'HomeController@postSistema');
+	Route::post('sistema', 'HomeController@postSistema');
 
-Route::get('logout', 'HomeController@getLogout');
+	Route::get('logout', 'HomeController@getLogout');
+
+	Route::get('excluir/{artigo}', 'HomeController@getExcluirArtigo');
+});

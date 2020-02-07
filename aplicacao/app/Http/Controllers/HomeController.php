@@ -35,16 +35,9 @@ class HomeController extends Controller {
     
   public function getSistema()
   {
-
-
-    if (Auth::check())
-    {
       $artigos = Artigo::whereIdUsuario(Auth::user()->id)->get();
       return view('sistema.index', compact('artigos'));
-    }
-     
 
-    return view('index');
   } 
 
   public function postSistema(Request $request)
@@ -109,5 +102,11 @@ class HomeController extends Controller {
   {
     Auth::logout();
     return redirect('/');
+  }  
+
+  public function getExcluirArtigo(Artigo $artigo)
+  {
+    $artigo->delete();
+    return redirect('sistema')->with('ok', 'Artigo excluido do banco de dados');
   }  
 }

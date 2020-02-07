@@ -24,7 +24,7 @@
 		@if($artigos->count())
 			<ul>
 			@foreach($artigos as $artigo)
-				<li><a href="{{ $artigo->link }}" target="_blank">{{ $artigo->titulo }}</a></li>
+				<li><a href="{{ $artigo->link }}" target="_blank">{{ $artigo->titulo }}</a> <a href="{{url('excluir/'.$artigo->id)}}"><span class="btn btn-danger btn-xs">Excluir</span></li>
 			@endforeach
 			</ul>
 		@endif
